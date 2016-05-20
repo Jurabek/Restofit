@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using ImageCircle.Forms.Plugin.Droid;
 using Restofit.UI;
 
 namespace Restofit.Droid
@@ -14,6 +15,8 @@ namespace Restofit.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            ImageCircleRenderer.Init();
+
             LoadApplication(new App());
         }
     }

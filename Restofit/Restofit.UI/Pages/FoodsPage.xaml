@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:FoodsXamlPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restofit.UI.Pages.FoodsPage"
+             xmlns:local="clr-namespace:Restofit.UI.Pages;assembly=Restofit.UI"
+             xmlns:controls="clr-namespace:Restofit.UI.Controls;assembly=Restofit.UI"
+             xmlns:views="clr-namespace:Restofit.UI.Views;assembly=Restofit.UI">
+  <local:FoodsXamlPage.ToolbarItems>
+    <ToolbarItem Text="{Binding MainViewModel.BasketViewModel.OrdersCount, StringFormat='Basket(\{0\})'}" ClassId="basket" Command="{Binding OpenOrder}" x:Name="orderToolbar"/>
+  </local:FoodsXamlPage.ToolbarItems>
+  <local:FoodsXamlPage.Content>
+    <views:FoodsListView ItemsSource="{Binding OrderableFoods}" x:Name="list"/>
+  </local:FoodsXamlPage.Content>
+</local:FoodsXamlPage>

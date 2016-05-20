@@ -26,6 +26,7 @@ namespace Restofit.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::ModernHttpClient.Resource.String.library_name = global::Restofit.Droid.Resource.String.library_name;
 			global::Splat.Resource.String.library_name = global::Restofit.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Restofit.Droid.Resource.Attribute.actionBarSize;
 		}

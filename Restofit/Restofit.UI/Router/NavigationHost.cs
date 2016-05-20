@@ -11,7 +11,7 @@ namespace Restofit.UI.Router
     public class NavigationHost : NavigationPage, IActivatable
     {
         public static readonly BindableProperty RouterProperty =
-            BindableProperty.Create(nameof(Router), typeof(NavigationState), typeof(NavigationHost), BindingMode.OneWay);
+            BindableProperty.Create(nameof(Router), typeof(NavigationState), typeof(NavigationHost), default(NavigationHost), BindingMode.OneWay);
 
         public NavigationState Router
         {
