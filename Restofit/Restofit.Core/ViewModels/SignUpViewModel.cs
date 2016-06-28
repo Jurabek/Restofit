@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Net.Http;
 using Fusillade;
+using Plugin.Connectivity;
 using ReactiveUI;
 using Refit;
 using Restofit.Core.Models;
@@ -90,9 +91,12 @@ namespace Restofit.Core.ViewModels
                 .CreateAsyncTask(canRegester, async _ => 
                 {
                     IsLoading = true;
-                    var client = new HttpClient(NetCache.UserInitiated)
+                    string address = RestofitApiHelper.Address;
+
+                    //bool isReachable = await CrossConnectivity.Current.IsRemoteReachable(address);
+                    var client = new HttpClient()
                     {
-                        BaseAddress = new Uri(RestofitApiHelper.Address)
+                        BaseAddress =  new Uri(address)
                     };
                     var api = RestService.For<IRestaurantApi>(client);
                     var result = await api.Regester(Name, RegesterEmail, RegesterPassword, ConfirmPassword);

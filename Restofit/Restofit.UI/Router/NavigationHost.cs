@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Restofit.UI.Router
 {
-    public class NavigationHost : NavigationPage, IActivatable
+    public class NavigationHost : NavigationPage, INavigationHost, IActivatable
     {
         public static readonly BindableProperty RouterProperty =
             BindableProperty.Create(nameof(Router), typeof(NavigationState), typeof(NavigationHost), default(NavigationHost), BindingMode.OneWay);
@@ -29,7 +29,7 @@ namespace Restofit.UI.Router
             SubscribeNavigationHosts();
         }
 
-        private void SubscribeNavigationHosts()
+        protected void SubscribeNavigationHosts()
         {
             bool currentlyPopping = false;
             this.WhenAnyObservable(x => x.Router.NavigationStack.Changed)

@@ -92,7 +92,7 @@ namespace Restofit.UI
         {
             Locator.CurrentMutable.RegisterConstant(new MainViewModel(null), typeof(MainViewModel));
             Locator.CurrentMutable.RegisterConstant(new SignUpViewModel(), typeof(SignUpViewModel));
-            return new SignUpPage();
+            return new MainPage();
         }
     }
     public class ColorTheme

@@ -14,7 +14,6 @@
 			</StackLayout>
 
 			<StackLayout x:Name="label2" Grid.Row="1" Padding="24,0" Scale="0" VerticalOptions="Center">
-        <controls:RestaurantEntry x:Name="myEntry"></controls:RestaurantEntry>
 				<Label StyleId="label2" Text="First thing's first, you must log into the our service." Style="{StaticResource whiteLabelStyle}" FontSize="Medium" XAlign="Center" />
 			</StackLayout>
 

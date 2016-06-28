@@ -27,7 +27,7 @@ namespace Restofit.Core.Router
         public NavigationState()
         {
             navigationStack = new ReactiveList<INavigatableViewModel>();
-            setupRx();
+            SetupRx();
             Activator = new ViewModelActivator();
         }
 
@@ -78,7 +78,7 @@ namespace Restofit.Core.Router
         [IgnoreDataMember]
         public IObservable<INavigatableViewModel> CurrentViewModel { get; protected set; }
 
-        void setupRx()
+        void SetupRx()
         {
             var countAsBehavior = Observable.Concat(
                 Observable.Defer(() => Observable.Return(navigationStack.Count)),

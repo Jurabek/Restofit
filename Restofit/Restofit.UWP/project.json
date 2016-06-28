@@ -4,6 +4,7 @@
     "akavache.core": "4.1.2",
     "akavache.sqlite3": "4.1.2",
     "fusillade": "0.6.0",
+    "Microsoft.Net.Http": "2.2.29",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
     "modernhttpclient": "2.4.2",
     "Newtonsoft.Json": "8.0.3",
@@ -19,6 +20,7 @@
     "Rx-XAML": "2.2.5",
     "Splat": "1.6.2",
     "SQLitePCL.raw_basic": "0.8.6",
+    "Xam.Plugin.Connectivity": "2.1.2",
     "Xam.Plugins.Forms.ImageCircle": "1.4.1",
     "Xamarin.Forms": "2.3.0.38-pre2"
   },
