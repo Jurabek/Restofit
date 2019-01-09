@@ -23,7 +23,7 @@ namespace Restofit.UI
         public App()
         {
             InitializeComponent();
-            var app = new AppBotstrapper();
+            var app = new AppBootstrapper();
             MainPage = app.WelcomeStartPage();
         }
 
@@ -47,13 +47,13 @@ namespace Restofit.UI
             };
         }
     }
-    public class AppBotstrapper : ReactiveObject, INavigatableScreen
+    public class AppBootstrapper : ReactiveObject, INavigatableScreen
     {
         // The Router holds the ViewModels for the back stack. Because it's
         // in this object, it will be serialized automatically.
         public NavigationState Navigation { get; protected set; }
 
-        public AppBotstrapper()
+        public AppBootstrapper()
         {
             Navigation = new NavigationState();
 
